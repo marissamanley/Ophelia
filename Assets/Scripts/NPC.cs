@@ -27,12 +27,12 @@ public class NPC : MonoBehaviour
         //Message to display if main dialogue is done
         else if(other.gameObject.tag == "Player" && !notHit)
         {
-            message.text = "Bruh why u so close to me get away";
+            message.text = "get away";
         }
     }
     IEnumerator displayText(Collider2D other)
     {
-        message.text = "Obelia u a bitch";
+        message.text = "Ophelia";
         other.gameObject.GetComponent<Move2D>().speed = 0;
         //will continue after mouse button is clicked
 
@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour
         }
         yield return new WaitForEndOfFrame(); //this is essential, it ensures that one input isn't used for all of the messages
 
-       message.text = "jk ily babe";
+       message.text = "test1";
 
         while (!Input.GetButtonDown("Fire1"))
         { //wait for input loop 
@@ -53,7 +53,7 @@ public class NPC : MonoBehaviour
         }
         yield return new WaitForEndOfFrame(); 
 
-        message.text = "Well, lets go get some peepeepoopoos";
+        message.text = "test2";
 
         //let player move again
         other.gameObject.GetComponent<Move2D>().speed = 6;
