@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour
         }
         yield return new WaitForEndOfFrame(); //this is essential, it ensures that one input isn't used for all of the messages
 
-       message.text = "test";
+       message.text = "test1";
 
         while (!Input.GetButtonDown("Fire1"))
         { //wait for input loop 
@@ -53,7 +53,8 @@ public class NPC : MonoBehaviour
         }
         yield return new WaitForEndOfFrame(); 
 
-        message.text = "test";
+
+        message.text = "test2";
 
         //let player move again
         other.gameObject.GetComponent<Move2D>().speed = 6;
